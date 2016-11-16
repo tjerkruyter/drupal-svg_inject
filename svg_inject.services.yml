@@ -1,0 +1,5 @@
+services:
+  svg_inject.twig.svg_inject_extension:
+    class: Drupal\svg_inject\Twig\SvgInjectExtension
+    tags:
+      - { name: twig.extension }

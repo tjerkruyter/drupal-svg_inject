@@ -1,0 +1,5 @@
+name: SVG inject
+type: module
+description: Inject svg based on path given
+core: 8.x
+package: Twig Extensions

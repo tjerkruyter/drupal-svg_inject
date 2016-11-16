@@ -1,0 +1,18 @@
+<?php
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function svg_inject_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.svg_inject':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Inject svg based on path') . '</p>';
+      return $output;
+
+    default:
+  }
+}
