@@ -29,8 +29,10 @@ class SvgInjectExtension extends \Twig_Extension {
     }
 
     public function svgInject($path) {
-      if(file_exists($path)) {
-          return file_get_contents($path);
+      $path = \Drupal::theme()->getActiveTheme()->getPath() . '/' . $path . '.svg';
+
+      if( file_exists($path) ) {
+        return file_get_contents($path);
       }
     }
 }
